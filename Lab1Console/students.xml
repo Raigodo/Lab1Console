@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Student>
+		<Id>1</Id>
+		<Name>v1</Name>
+		<Surname>uzv1</Surname>
+		<Email>some@email.com</Email>
+	</Student>
+	<Student>
+		<Id>2</Id>
+		<Name>v2</Name>
+		<Surname>uzv2</Surname>
+		<Email>other@email.com</Email>
+	</Student>
+	<Student>
+		<Id>c</Id>
+		<Name>c</Name>
+		<Surname>c</Surname>
+		<Email>c@email.com</Email>
+	</Student>
+</ArrayOfStudent>
