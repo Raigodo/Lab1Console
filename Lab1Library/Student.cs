@@ -29,7 +29,7 @@ public class Student
     /// <summary>
     /// Konstruktors, kas inicializē klases īpašības.
     /// </summary>
-    public Student(string name, string surname, string email, string id)
+    public Student(string name, string surname, string email, string id, string group)
     {
         //ja kāds no parametriem ir tukša virkne, izraisīt izņēmumu
         if (name.Length == 0 || surname.Length == 0 || id.Length == 0)
@@ -38,12 +38,13 @@ public class Student
         this.Surname = surname;
         Email = email;
         this.Id = id;
+        Group = group;
     }
     /// <summary>
     // Teksta virknes formā atgriež klases īpašību vērtības.
     /// </summary>
     public override string ToString()
     {
-        return Id + " : " + Name + " " + Surname;
+        return $"{Id} : {Name} {Surname} {Email} {Group}";
     }
 }

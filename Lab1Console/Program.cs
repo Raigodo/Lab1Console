@@ -1,5 +1,4 @@
-﻿
-using Lab1Library;
+﻿using Lab1Library;
 
 const string ViewStudents = "all";
 const string SetPath = "path";
@@ -16,7 +15,15 @@ while(true)
     if (cmd == SetPath)
     {
         Console.Write("input path: ");
-        path = Console.ReadLine() ?? StudentsData.DefaultFilename;
+        var input = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            path = StudentsData.DefaultFilename;
+        }
+        else
+        {
+            path = $"..\\..\\..\\{input}";
+        }
     }
 
     else if (cmd == ViewStudents) 
@@ -59,7 +66,10 @@ void AddOne(string fileName)
     Console.Write("Email: ");
     var email = Console.ReadLine() ?? string.Empty;
 
-    var student = new Student(name, surname, email, id);
+    Console.Write("Group: ");
+    var group = Console.ReadLine() ?? string.Empty;
+
+    var student = new Student(name, surname, email, id, group);
 
     try
     {
